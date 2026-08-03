@@ -1,0 +1,21 @@
+[
+  { "name": "Crédit Mutuel", "email": "phishing@creditmutuel.fr" },
+  { "name": "Société Générale", "email": "securite@societegenerale.fr" },
+  { "name": "EDF", "email": "message-frauduleux@edf.fr" },
+  { "name": "EDF UK (Energy)", "email": "phishing@edfenergy.com" },
+  { "name": "Crédit Agricole", "email": "signalement.phishing@credit-agricole.com" },
+  { "name": "La Poste", "email": "phishing@laposte.fr" },
+  { "name": "Amazon", "email": "reportascam@amazon.com"},
+  { "name": "Apple", "email": "reportphishing@apple.com"},
+  { "name": "Banque Populaire / BRED", "email": "alerte-phishing-bp@bpce.fr"},
+  { "name": "Banque Postale", "email": "alertespam@labanquepostale.fr"},
+  { "name": "Boulanger", "email": "alertefraudes@boulanger.com"},
+  { "name": "Caisse d'Épargne", "email": "alerte-phishing-ce@bpce.fr"},
+  { "name": "CDiscount", "email": "stop-spoof@cdiscount.com"},
+  { "name": "FNAC / Darty", "email": "abuse@fnacdarty.com"},
+  { "name": "ING", "email": "securite.fr@ing.com"},
+  { "name": "Mondial Relay", "email": "phishing@inpost-group.com"},
+  { "name": "Microsoft", "email": "abuse@microsoft.com"},
+  { "name": "Orange", "email": "abuse@orange.fr"},
+  { "name": "PayPal", "email": "spoof@paypal.com"}
+]
