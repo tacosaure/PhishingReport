@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Report Suspicious Email</title>
+  <style>
+    :root {
+      --ink: #101828;
+      --muted: #667085;
+      --faint: #98a2b3;
+      --line: #e4e7ec;
+      --surface: #ffffff;
+      --panel: #f9fafb;
+      --row-hover: #f2f4f7;
+      --accent: #101828;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      width: 340px;
+      background: var(--surface);
+      font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      padding: 14px 16px 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 2px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -0.1px;
+    }
+
+    .search-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .search-row svg {
+      flex: none;
+      width: 13px;
+      height: 13px;
+      color: var(--faint);
+    }
+
+    #search-box {
+      flex: 1;
+      border: none;
+      background: transparent;
+      font-size: 12.5px;
+      color: var(--ink);
+      outline: none;
+      padding: 2px 0;
+    }
+
+    #search-box::placeholder {
+      color: var(--faint);
+    }
+
+    #result-count {
+      font-size: 11px;
+      color: var(--faint);
+      white-space: nowrap;
+    }
+
+    #team-list {
+      max-height: 240px;
+      overflow-y: auto;
+    }
+
+    .team-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      width: 100%;
+      text-align: left;
+      padding: 9px 16px;
+      border: none;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+      cursor: pointer;
+      transition: background 90ms ease;
+    }
+
+    .team-row:last-child {
+      border-bottom: none;
+    }
+
+    .team-row:hover,
+    .team-row:focus-visible {
+      background: var(--row-hover);
+      outline: none;
+    }
+
+    .team-info {
+      min-width: 0;
+    }
+
+    .team-name {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--ink);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .team-email {
+      font-size: 11px;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .team-row svg {
+      flex: none;
+      width: 12px;
+      height: 12px;
+      color: var(--faint);
+      opacity: 0;
+      transform: translateX(-2px);
+      transition: opacity 90ms ease, transform 90ms ease;
+    }
+
+    .team-row:hover svg,
+    .team-row:focus-visible svg {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    #status {
+      margin: 0;
+      padding: 14px 16px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    #status.error {
+      color: #b3441f;
+    }
+
+    footer {
+      padding: 8px 16px;
+      font-size: 10.5px;
+      color: var(--faint);
+      border-top: 1px solid var(--line);
+      background: var(--panel);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Advanced report</p>
+    <h1>Select a recipient team</h1>
+  </header>
+  <div class="search-row">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="7"/>
+      <path d="m21 21-4.3-4.3"/>
+    </svg>
+    <input type="text" id="search-box" placeholder="Search teams…" autofocus>
+    <span id="result-count"></span>
+  </div>
+  <div id="team-list">
+    <p id="status">Loading teams…</p>
+  </div>
+  <footer>Security is always notified, in addition to the selected team.</footer>
+  <script src="popup.js"></script>
+</body>
+</html>

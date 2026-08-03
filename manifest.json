@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Report Suspicious Email",
+  "version": "1.1",
+  "description": "Report suspicious emails to a chosen security team and move them to Spam",
+  "applications": {
+    "gecko": {
+      "id": "tacosaure@github",
+      "strict_min_version": "102.0"
+    }
+  },
+  "permissions": [
+    "messagesRead",
+    "messagesMove",
+    "compose",
+    "compose.send",
+    "accountsRead",
+    "menus",
+    "notifications",
+    "https://raw.githubusercontent.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "message_display_action": {
+    "default_title": "Report Suspicious Email",
+    "default_icon": "icon.png"
+  }
+}
