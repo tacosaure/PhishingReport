@@ -17,7 +17,7 @@
   { "name": "Mondial Relay", "email": "phishing@inpost-group.com"},
   { "name": "Microsoft", "email": "abuse@microsoft.com"},
   { "name": "Orange", "email": "abuse@orange.fr"},
-  { "name": "PayPal", "email": "spoof@paypal.com"}
+  { "name": "PayPal", "email": "spoof@paypal.com"},
   { "name": "Netflix", "email": "phishing@netflix.com" },
   { "name": "LinkedIn", "email": "phishing@linkedin.com" },
   { "name": "Google", "email": "reportphishing@google.com" },
